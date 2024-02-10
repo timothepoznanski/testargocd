@@ -8,5 +8,5 @@ spec:
   ports:
   - port: 8089
     protocol: TCP
-    targetPort: 8089
+    targetPort: 80
   
