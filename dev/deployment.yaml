@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris1
+  name: tetris1argoapp
 spec:
   selector:
     matchLabels:
-      app: tetris1
+      app: tetris1argoapp
   replicas: 2
   template:
     metadata:
