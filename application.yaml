@@ -16,8 +16,8 @@ spec:
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true
+    - CreateNamespace=true  # If namesapce doesn't exist, create it
 
-    automated:
-      selfHeal: true
-      prune: true
+    automated:  # Argocd will pull and apply changes from Git repo every 3 minutes (webhook can be configured to remove this delay)
+      selfHeal: true  # Undo or overide (sync with git repo) any manual changes done on the cluster
+      prune: true  # If component is renamed or deleted in files, Argo should do it on the cluster
