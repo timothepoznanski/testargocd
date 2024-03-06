@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tetris-argo-app-1
+  name: tetris-argo-app-2
   namespace: argocd
 spec:
   project: default
@@ -16,7 +16,7 @@ spec:
 
   syncPolicy:
     syncOptions:
-    - CreateNamespace=true  # If namesapce doesn't exist, create it
+    - CreateNamespace=true  # If namespace doesn't exist, create it
 
     automated:  # Argocd will pull and apply changes from Git repo every 3 minutes (webhook can be configured to remove this delay)
       selfHeal: true  # Undo or overide (sync with git repo) any manual changes done on the cluster
