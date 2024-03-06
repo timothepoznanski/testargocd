@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: tetris-argo-2
-  replicas: 10
+  replicas: 2
   template:
     metadata:
       labels:
