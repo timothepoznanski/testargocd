@@ -15,6 +15,7 @@ spec:
     namespace: tetris-argo-3
 
   syncPolicy:
+    syncInterval: 1m
     syncOptions:
     - CreateNamespace=true  # If namespace doesn't exist, create it
 
