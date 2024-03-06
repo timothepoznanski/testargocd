@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: tetris1service
+  name: tetris-argo-service-2
 spec:
   selector:
-    app: tetris1argoapp
+    app: tetris-argo-2
   ports:
   - port: 8089
     protocol: TCP

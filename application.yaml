@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tetris1argoapp
+  name: tetris-argo-app-1
   namespace: argocd
 spec:
   project: default
@@ -12,7 +12,7 @@ spec:
     path: dev
   destination: 
     server: https://kubernetes.default.svc
-    namespace: tetris1argoapp
+    namespace: tetris-argo-2
 
   syncPolicy:
     syncOptions:

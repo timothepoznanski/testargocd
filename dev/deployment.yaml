@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris1argoapp
+  name: tetris-argo-deployment-2
 spec:
   selector:
     matchLabels:
-      app: tetris1argoapp
+      app: tetris-argo-2
   replicas: 3
   template:
     metadata:
       labels:
-        app: tetris1argoapp
+        app: tetris-argo-2
     spec:
       containers:
-      - name: tetris1argoapp
+      - name: tetris-argo-2
         image: pozinux/tetris:1.0.0
         ports:
         - containerPort: 80
