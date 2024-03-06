@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: tetris-argo-app-3
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-wave: "1m"
 spec:
   project: default
 
