@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: tetris-argo-app-3
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "1m"
 spec:
   project: default
 
@@ -15,7 +17,6 @@ spec:
     namespace: tetris-argo-3
 
   syncPolicy:
-    syncInterval: 1m
     syncOptions:
     - CreateNamespace=true  # If namespace doesn't exist, create it
 
